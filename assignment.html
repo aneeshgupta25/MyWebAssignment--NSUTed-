@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSUTed</title>
+    <style>
+        button {
+            border: none;
+            background: none;
+        }
+        .navBar {
+            background-color: #1C2956;
+            border-radius: 10px;
+            width: 40%;
+            margin: auto;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+        .link {
+            padding: 11px;
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            margin: 0px 30px 0px 30px;
+            text-decoration: none;
+        }
+        .link:hover, .linkHidden:hover {
+            background-color: #3f5bba;
+            cursor: pointer;
+        }
+        .link {
+            display: inline-block;
+        }
+        .intro {
+            width: 90%;
+            height: 200px;
+            margin: auto;
+        }
+        .quote {
+            color: white;
+            padding: 10px;
+            margin-left: 20px;
+        }
+        body {
+            background-image: linear-gradient(rgba(0,0,0,.7), rgba(00,0,0,.7)), url(https://mypenmyfriend.com/wp-content/uploads/2020/11/connected-technology.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+        .whoAreWe {
+            color: white;
+            width: 90%;
+            margin: auto;
+            padding: 5px;
+            font-size: 23px;
+        }
+        .sub-heading {
+            color: aqua;
+            font-size: 30px;
+        }
+        .course {
+            display: inline-block;
+            background-color: white;
+            width: 33%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            height: 200px;
+            border-radius: 15px;
+            color: black;
+            font-size: 40px;
+            font-style: bold;
+            text-align: center;
+        }
+        .course:hover {
+            box-shadow: 0px 10px 0px 0px rgba(255,2555,255,0.2);
+            cursor: pointer;
+        }
+        .courseContent {
+            width: 33%;
+            height: 200px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        #web:hover {
+            content: "Hello!!";
+        }
+    </style>
+</head>
+<body>
+    <div class="navBar">
+        <button class="link" id="home" onclick="homeFunction()">Home</button>
+        <button class="link" id="about" onclick="homeFunction()">About</button>
+        <button class="link" id="courses" onclick="homeFunction()">Courses</button>
+        <button class="link" id="contact" onclick="homeFunction()">Contact</button>
+    </div>
+
+    <div class="intro" id="homeDiv">
+        <h1 class="quote" id="line1"><span style="font-size: 50px; font-style: italic;">Skills</span> <span style="font-style:italic">open the door to<br></span><span style="font-size: 50px; font-style: italic;">Opportunities</span>, <span style="font-size: 50px; font-style: italic;">Success</span> and <span style="font-size: 50px; font-style: italic;">Wealth...</span></h1>
+    </div>
+
+    <div class="whoAreWe" id="aboutDiv">
+        <p class="sub-heading">WHO ARE WE.. ??</p>
+        <p><span style="font-size: 30px; font-style: italic">NSUTed</span> is a vision to bring NSUT students on a single platform where they learn and share technical skills, knowledge, and guidance for future peers... This platform not only helps to connect, but also provides some amazing courses structurized and created by NSUT students themselves.<span style="font-size: 30sp; color: aqua;"> Now, what you need to do???</span> Sit Back, Relax and start improving your skills in any domain of your interest!!</p>
+        <p style="font-size: 23px;">The aim behind this platform is to develop a larger community for NSUT students where the are linked to each other or shall we say <span style="font-size: 30px; font-style: italic; color: aqua;">NSUT-ed to one another...</span></p>
+    </div>
+    
+    <div class="whoAreWe" id="coursesDiv">
+        <p class="sub-heading">Courses We Offer...</p>
+        <div class="course courseContent" style="background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('https://img.freepik.com/premium-vector/online-courses-concept_23-2148533386.jpg?w=2000');" id="webCourse" onclick="openWeb()">
+            <p>Web Development</p>
+            <p style="font-size: 25px;">Instructor: Mrs. Ashima</p>
+        </div>
+        <div class="course courseContent" style="background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('https://satyaka.com/wp-content/uploads/2020/11/mobile-app-company-kolkata-01.svg');" id="appCourse" onclick="openMyApp()">
+            <p id="app">App Development</p>
+            <p style="font-size: 25px;">Instructor: Aneesh Gupta</p>
+        </div>
+        <div class="course courseContent" style="background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('https://as1.ftcdn.net/v2/jpg/03/08/23/68/1000_F_308236869_ToPmV6g7Edcp9f8aX3qovsxR6IwYqYW9.jpg');" id="dsaCourse" onclick="openMyDSA()">
+            <p id="dsa">Data Structures & Algorithms</p>
+            <p style="font-size: 25px;">Instructor: Aneesh Gupta</p>
+        </div>
+    </div>
+    
+    <div class="whoAreWe"  id="contactDiv">
+        <p class="sub-heading">Contact Us...</p>
+        <p>Aneesh Gupta</p>
+        <p>Contact: -> 9310463242</p>
+        <p>Roll No: -> 2021UCS1720</p>
+        <p>Branch & Sec: -> CSE Sec-3</p>
+    </div>
+
+    <script>
+        document.getElementById("home").addEventListener("click", homeFunction)
+        document.getElementById("about").addEventListener("click", aboutFunction)
+        document.getElementById("courses").addEventListener("click", coursesFunction)
+        document.getElementById("contact").addEventListener("click", contactFunction)
+        document.getElementById("appCourse").addEventListener("click", contactFunction)
+
+        function homeFunction() {
+            document.getElementById("homeDiv").scrollIntoView();
+        }
+        function aboutFunction() {
+            document.getElementById("aboutDiv").scrollIntoView();
+        }
+        function coursesFunction() {
+            document.getElementById("coursesDiv").scrollIntoView();
+        }
+        function contactFunction() {
+            document.getElementById("contactDiv").scrollIntoView();
+        }
+        function openMyDSA() {
+            window.open('https://drive.google.com/file/d/1fzkEpQevo4n-DleBzGFQVHX0JEknOl4l/view?usp=share_link', "_blank")
+        }
+        function openMyApp() {
+            window.open('https://drive.google.com/file/d/1fDP3MYz6EpJ11LntnGfB5tBw-oIg3yV7/view?usp=share_link', "_blank")
+        }
+        function openWeb() {
+            alert("Thanks a lot for teaching this technology.. :)")
+        }
+        
+    </script>
+
+</body>
+</html>
